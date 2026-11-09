@@ -186,6 +186,21 @@
     tbody tr:hover { background: #f5f3ff; }
     tbody td:first-child { font-weight: 600; }
 
+    /* Solid, high-contrast amounts so the rupee values are easy to read */
+    .kpi .value {
+      background: none;
+      -webkit-background-clip: border-box;
+      background-clip: border-box;
+      color: #1e3a8a;
+      font-weight: 800;
+    }
+
+    .bar-value,
+    td.num {
+      color: #111827;
+      font-weight: 700;
+    }
+
     /* Note under the dashboard */
     .note { text-align: center; }
 
