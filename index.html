@@ -143,6 +143,52 @@
       color: var(--muted);
     }
 
+    /* Gradient header band */
+    header {
+      background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 60%, #7c3aed 100%);
+      color: #fff;
+      border-bottom: none;
+      padding: 2rem 1.25rem;
+    }
+
+    header h1 { font-size: 1.9rem; }
+    header p { color: #dbeafe; }
+
+    /* Softer page background */
+    body { background: #eef2ff; }
+
+    /* Cards with shadows */
+    .kpi, .panel {
+      box-shadow: 0 4px 14px rgba(15, 23, 42, 0.08);
+      border: none;
+    }
+
+    /* Coloured accent bar on each KPI card */
+    .kpi { border-top: 4px solid var(--accent); }
+    .kpi-sales { border-top-color: #2563eb; }
+    .kpi-profit { border-top-color: #15803d; }
+    .kpi-margin { border-top-color: #7c3aed; }
+    .kpi-orders { border-top-color: #ea580c; }
+
+    .kpi .value {
+      background: linear-gradient(90deg, #2563eb, #7c3aed);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    /* Gradient bars */
+    .bar-track { background: #e0e7ff; height: 18px; }
+    .bar-fill { background: linear-gradient(90deg, #2563eb, #7c3aed); }
+
+    /* Table styling */
+    th { color: #4338ca; }
+    tbody tr:hover { background: #f5f3ff; }
+    tbody td:first-child { font-weight: 600; }
+
+    /* Note under the dashboard */
+    .note { text-align: center; }
+
     @media (max-width: 600px) {
       .bar-row { grid-template-columns: 90px 1fr 70px; }
       .kpi .value { font-size: 1.4rem; }
@@ -167,10 +213,10 @@
     </div>
 
     <div class="kpis">
-      <div class="kpi"><div class="label">Total Sales</div><div class="value" id="kpiSales">-</div></div>
-      <div class="kpi"><div class="label">Total Profit</div><div class="value" id="kpiProfit">-</div></div>
-      <div class="kpi"><div class="label">Profit Margin</div><div class="value" id="kpiMargin">-</div></div>
-      <div class="kpi"><div class="label">Orders</div><div class="value" id="kpiOrders">-</div></div>
+      <div class="kpi kpi-sales"><div class="label">Total Sales</div><div class="value" id="kpiSales">-</div></div>
+      <div class="kpi kpi-profit"><div class="label">Total Profit</div><div class="value" id="kpiProfit">-</div></div>
+      <div class="kpi kpi-margin"><div class="label">Profit Margin</div><div class="value" id="kpiMargin">-</div></div>
+      <div class="kpi kpi-orders"><div class="label">Orders</div><div class="value" id="kpiOrders">-</div></div>
     </div>
 
     <div class="panels">
